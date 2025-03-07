@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анализ МЭ элементов с PDF</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <label class="smart-buffer-toggle">
+                <input type="checkbox" id="smartBufferToggle">
+                Умный буфер (Ctrl + Q)
+            </label>
+            <label class="gender-select">
+                Пол:
+                <select id="genderSelect">
+                    <option value="универсальный">Универсальный</option>
+                    <option value="мужчина">Мужчина</option>
+                    <option value="женщина">Женщина</option>
+                </select>
+            </label>
+            <label class="age-input">
+                Возраст:
+                <input type="number" id="ageInput" min="0" max="150" value="30">
+            </label>
+        </div>
+        <div class="content">
+            <div class="pdf-viewer">
+                <input type="file" id="pdfInput" accept=".pdf">
+                <div id="pdfContainer" class="pdf-container"></div>
+            </div>
+            <div class="form-container">
+                <div class="selectors">
+                    <select id="labSelect">
+                        <option value="">Выберите лабораторию</option>
+                    </select>
+                    <select id="panelSelect" disabled>
+                        <option value="">Выберите панель</option>
+                    </select>
+                </div>
+                <div id="elements-list"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
