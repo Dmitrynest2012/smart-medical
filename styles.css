@@ -134,7 +134,7 @@ body {
 }
 
 .form-container {
-    width: 42%;
+    width: 50%;
     padding: 20px;
     overflow-y: auto; /* Уже есть, оставляем */
     background-color: #fff;
@@ -237,7 +237,7 @@ body {
 
 .element label {
     margin: 0;
-    color: #137fe4;
+    color: #0084ff;
     font-size: 0.8em; /* Уменьшили размер шрифта */
     font-weight: bold;
     font-family: 'Play';
